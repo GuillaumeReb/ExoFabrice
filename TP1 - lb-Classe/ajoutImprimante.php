@@ -5,14 +5,25 @@ require_once("./Classes/Imprimante.php");
 require_once("./Classes/Utilisateur.php");
 
 
-$imprimante1 = new Imprimante;
+$imprimante = new Imprimante;
 
-$imprimante1-> nom = "LBP5200";
-$imprimante1-> marque = "Canon";
-$imprimante1-> modele = "Laser";
-$imprimante1-> ppm = 20;
+$imprimante->nom= $_REQUEST['nom'];
+$imprimante->marque= $_REQUEST['marque'];
+$imprimante-> modele = $_REQUEST['modele'];
+$imprimante-> ppm = $_REQUEST['ppm'];
 
-var_dump($imprimante1);
+var_dump($imprimante);
+
+// $nom = $_REQUEST['nom'];
+// echo $nom;
+
+// echo 'Nom : '.$_POST["nom"].'<br>';
+// echo 'Marque : ' .$_POST["marque"].'<br>';
+// echo 'Modèle : ' .$_POST["model"].'<br>';
+// echo 'PPM : ' .$_POST["ppm"].'<br>';
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -34,10 +45,10 @@ var_dump($imprimante1);
     <input type="text" id="nom" name="nom" />
     
    
-    <label for="model">Model</label>
-    <select name="model" id="model">
-        <option value="">Laser</option>
-        <option value="">Jet d'encre</option>
+    <label for="modele">Model</label>
+    <select name="modele" id="modele">
+        <option >Laser</option>
+        <option >Jet d'encre</option>
     </select>
      
     <label for="ppm">PPM:</label>
@@ -47,6 +58,10 @@ var_dump($imprimante1);
     <input type="submit" value="Envoyer" />
 
     </form>
-    
+<br>
+<br>
+<a href="index.php">
+    <button>Retour</button>
+</a>
 </body>
 </html>

@@ -47,5 +47,6 @@ var_dump($utilisateur2);
     <h1>Menu</h1>
     <a href="ajoutImprimante.php">Ajout d'une imprimante</a>
     <a href="ajoutOrdinateur.php">Ajout d'un ordinateur</a>
+    <a href="ajoutUtilisateur.php">Ajout d'un utilisateur</a>
 </body>
 </html>
